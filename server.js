@@ -12,13 +12,18 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// app.get("/", function(req, res) {
+// 	console.log("This is the home page");
+// });
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
 
-// Import routes and give the server access to them.
-var routes = require("./controllers/burgers_controllers.js");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
-app.use("/", routes);
+// // Import routes and give the server access to them.
+// var routes = require("./controllers/burgers_controllers.js");
+
+// app.use("/", routes);
+console.log("app is listening");
 
 app.listen(port);
