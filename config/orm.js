@@ -12,7 +12,7 @@ var orm = {
 		});
 	},
 
-	insertOne: function(userInput) {
+	insertOne: function(userInput, cb) {
 		var queryString = "INSERT INTO burgers (burger_name) VALUES ('" + userInput + "');";
 		connection.query(queryString, function(err, result) {
 			if (err) {
@@ -22,7 +22,7 @@ var orm = {
 		});
 	},
 
-	updateOne: function(id) {
+	updateOne: function(id, cb) {
 		var queryString = "UDPATE burgers SET devoured = true WHERE id = '" + id + "';";
 		connection.query(queryString, function(err, result) {
 			if (err) {
