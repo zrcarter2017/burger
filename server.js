@@ -12,9 +12,9 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.get("/", function(req, res) {
-// 	console.log("This is the home page");
-// });
+app.get("/", function(req, res) {
+	console.log("This is the home page");
+});
 
 
 // app.engine("handlebars", exphbs({ defaultLayout: "main" }));
