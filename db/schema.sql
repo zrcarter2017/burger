@@ -4,6 +4,6 @@ USE burger_db;
 CREATE TABLE burgers (
 	id INT Primary Key Auto_Increment,
 	burger_name VARCHAR(40) NOT NULL,
-	devoured BOOLEAN DEFAULT 1,
+	devoured BOOLEAN DEFAULT 0,
 	date TIMESTAMP DEFAULT CURRENT_TIMESTAMP	
 );
