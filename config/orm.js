@@ -18,7 +18,7 @@ var orm = {
 			if (err) {
 				throw err;
 			}
-			return result;
+			cb(result);
 		});
 	},
 
@@ -28,7 +28,7 @@ var orm = {
 			if (err) {
 				throw err;
 			}
-			return result;
+			cb(result);
 		})
 	}
 };
