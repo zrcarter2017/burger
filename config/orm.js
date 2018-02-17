@@ -25,8 +25,8 @@ return arr.toString();
 
 var orm = {
 
-	selectAll: function(cb) {
-		var queryString = "SELECT * FROM" + tableInput + ";";
+	selectAll: function(tableInput, cb) {
+		var queryString = "SELECT * FROM " + tableInput + ";";
 		connection.query(queryString, function(err, result) {
 			if (err) {
 				throw err;
@@ -35,7 +35,7 @@ var orm = {
 		});
 	},
 
-	insertOne: function(userInput, cb) {
+	insertOne: function(tables, cols, vals, cb) {
 		var queryString = "INSERT INTO " + table;
 
 		queryString += " (";
@@ -55,7 +55,8 @@ var orm = {
 		});
 	},
 
-	updateOne: function(id, cb) {
+	updateOne: function(table, obColVals, condition, cb) {
+	var queryString = "UPDATE " + table;
     queryString += " SET ";
     queryString += objToSql(objColVals);
     queryString += " WHERE ";

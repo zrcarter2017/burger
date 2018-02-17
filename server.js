@@ -12,18 +12,16 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/", function(req, res) {
-	console.log("This is the home page");
-});
+app.use(bodyParser.json());
 
 
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
-// // Import routes and give the server access to them.
-// var routes = require("./controllers/burgers_controllers.js");
+var routes = require("./controllers/burgers_controller.js");
 
-// app.use("/", routes);
+
+app.use("/", routes);
 console.log("app is listening");
 
 app.listen(port);
