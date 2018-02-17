@@ -5,5 +5,6 @@ CREATE TABLE burgers (
 	id INT Primary Key Auto_Increment,
 	burger_name VARCHAR(40) NOT NULL,
 	devoured BOOLEAN DEFAULT 0,
-	date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+	date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	Primary Key(id)
 );
