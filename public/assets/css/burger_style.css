@@ -17,3 +17,16 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+
+
+html {
+	background-color:darkslategrey;
+	color:white;
+	text-align:center;
+}
+
+#burgerImg {
+	height:200px;
+	width:250px;
+}
